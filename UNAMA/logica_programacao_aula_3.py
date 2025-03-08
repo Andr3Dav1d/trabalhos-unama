@@ -7,7 +7,8 @@ def titulo():
     print("""
 █░█ █▄░█ ▄▀█ █▀▄▀█ ▄▀█   ▄▄   ▄▀█ █▀▄ █▀
 █▄█ █░▀█ █▀█ █░▀░█ █▀█   ░░   █▀█ █▄▀ ▄█          
-[Aluno: André David T.R. Mendes - 04182774]""")
+[Aluno: André David T.R. Mendes - 04182774]
+""")
     
 # Função para limpar o terminal.
 # É necessário que o programa saiba qual sistema está executando ele para decidir qual comando usar. 
