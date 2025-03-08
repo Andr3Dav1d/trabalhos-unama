@@ -165,7 +165,7 @@ def main():
         celsius_para_farenheit()
     elif resposta == '10':
         calcular_desconto()
-    elif resposta == 'S':
+    elif resposta.lower() == 's':
         limpar()
         print('Saindo...')
     else:
