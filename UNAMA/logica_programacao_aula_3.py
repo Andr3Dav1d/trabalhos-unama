@@ -143,7 +143,7 @@ def main():
     print('- Lógica de Programação, Aula 3: Variáveis em Python')
     print('\n- Escolha uma opção:')
     print('1. Pedir nome do usuário\n2. Soma de dois números\n3. Calcular média entre dois números\n4. Exibir o dobro e o triplo de um número\n5. Idade do usuário em dias\n6. Calcular Área\n7. Calcular Troco\n8. Salário Mensal em dias\n9. Converter Graus Celsius para Farenheit\n10. Calcular desconto de um produto')
-    print('- Escolha uma opção de 1 a 10 ou S para sair.')
+    print('\n- Escolha uma opção de 1 a 10 ou S para sair.')
     resposta = input('> ')
     if resposta == '1':
         pedir_nome_do_usuario()
