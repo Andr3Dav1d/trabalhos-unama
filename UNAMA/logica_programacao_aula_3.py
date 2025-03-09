@@ -145,32 +145,34 @@ def main():
     print('1. Pedir nome do usuário\n2. Soma de dois números\n3. Calcular média entre dois números\n4. Exibir o dobro e o triplo de um número\n5. Idade do usuário em dias\n6. Calcular Área\n7. Calcular Troco\n8. Salário Mensal em dias\n9. Converter Graus Celsius para Farenheit\n10. Calcular desconto de um produto')
     print('\n- Escolha uma opção de 1 a 10 ou S para sair.')
     resposta = input('> ')
-    if resposta == '1':
-        pedir_nome_do_usuario()
-    elif resposta == '2':
-        somar_dois_numeros()
-    elif resposta == '3':
-        calcular_media()
-    elif resposta == '4':
-        dobro_e_triplo()
-    elif resposta == '5':
-        idade_usuario()
-    elif resposta == '6':
-        calcular_area()
-    elif resposta == '7':
-        calcular_troco()
-    elif resposta == '8':
-        salario_em_dias()
-    elif resposta == '9':
-        celsius_para_farenheit()
-    elif resposta == '10':
-        calcular_desconto()
-    elif resposta.lower() == 's':
-        limpar()
-        print('Saindo...')
-    else:
-        print('Opção Inválida!')
-        voltar_ao_menu()
+
+    match resposta.lower():
+        case '1':
+            pedir_nome_do_usuario()
+        case '2':
+            somar_dois_numeros()
+        case '3':
+            calcular_media()
+        case '4':
+            dobro_e_triplo()
+        case '5':
+            idade_usuario()
+        case '6':
+            calcular_area()
+        case '7':
+            calcular_troco()
+        case '8':
+            salario_em_dias()
+        case '9':
+            celsius_para_farenheit()
+        case '10':
+            calcular_desconto()
+        case 's':
+            limpar()
+            print('Saindo...')
+        case _:
+            print('Opção Inválida!')
+            voltar_ao_menu()
     
 # Verifica se o programa está sendo executado de forma independente.
 if __name__ == "__main__":
