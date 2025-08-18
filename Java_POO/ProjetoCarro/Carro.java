@@ -25,8 +25,14 @@ public class Carro {
 
     void tocarWav () {
         try {
+        File somCarro;
+        try {
+            somCarro = new File(Carro.class.getResource("ligandoCarro.wav").getPath());
+        } catch (Exception e) {
+            somCarro = new File("ligandoCarro.wav");
+        }
 
-        File somCarro = java.nio.file.Paths.get("ProjetoCarro", "ligandoCarro.wav").toFile();
+
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(somCarro);
 
         Clip clip = AudioSystem.getClip();
