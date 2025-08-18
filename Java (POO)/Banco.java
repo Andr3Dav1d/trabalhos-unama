@@ -5,7 +5,7 @@
 import java.util.Scanner;
 import java.io.IOException;
 
-public class Main {
+public class Banco {
     private static Scanner scanner = new Scanner(System.in);
     private static float saldo = 1000.0f; // Saldo global
     
