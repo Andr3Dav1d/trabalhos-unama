@@ -1,8 +1,10 @@
 package ProjetoCarro;
 
 import javax.sound.sampled.*;
-import java.io.File;
-import java.io.IOException;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.InputStream;
 
 public class Carro {
     String marca, modelo;
@@ -23,30 +25,48 @@ public class Carro {
         System.out.println("-------------------------");
     }
 
-    void tocarWav () {
-        try {
-        File somCarro;
-        try {
-            somCarro = new File(Carro.class.getResource("ligandoCarro.wav").getPath());
-        } catch (Exception e) {
-            somCarro = new File("ligandoCarro.wav");
+    void tocarWav() {
+    try {
+        InputStream recurso = Carro.class.getResourceAsStream("ligandoCarro.wav");
+
+        if (recurso == null) {
+            recurso = new FileInputStream("ligandoCarro.wav");
         }
 
+        try (BufferedInputStream bis = new BufferedInputStream(recurso);
+             AudioInputStream audioStream = AudioSystem.getAudioInputStream(bis)) {
 
-        AudioInputStream audioStream = AudioSystem.getAudioInputStream(somCarro);
+            AudioFormat baseFormat = audioStream.getFormat();
+            AudioFormat decodedFormat = new AudioFormat(
+                    AudioFormat.Encoding.PCM_SIGNED,
+                    baseFormat.getSampleRate(),
+                    16,
+                    baseFormat.getChannels(),
+                    baseFormat.getChannels() * 2,
+                    baseFormat.getSampleRate(),
+                    false
+            );
 
-        Clip clip = AudioSystem.getClip();
-        clip.open(audioStream);
+            try (AudioInputStream decodedStream = AudioSystem.getAudioInputStream(decodedFormat, audioStream);
+                 SourceDataLine line = (SourceDataLine) AudioSystem.getLine(new DataLine.Info(SourceDataLine.class, decodedFormat))) {
 
-        clip.start();
+                line.open(decodedFormat);
+                line.start();
 
-        Thread.sleep(clip.getMicrosecondLength() / 1000);
+                byte[] buffer = new byte[8192];
+                int bytesRead;
+                while ((bytesRead = decodedStream.read(buffer)) != -1) {
+                    line.write(buffer, 0, bytesRead);
+                }
 
-        } catch (UnsupportedAudioFileException | IOException 
-                 | LineUnavailableException | InterruptedException e) {
-            e.printStackTrace();
+                line.drain();
+            }
         }
+    } catch (Exception e) {
+        e.printStackTrace();
     }
+}
+
 
     void ligarCarro(boolean som) {
         System.out.printf("Ligando %s %s %d...\n", this.marca, this.modelo, this.ano);
