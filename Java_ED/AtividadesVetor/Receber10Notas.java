@@ -8,11 +8,16 @@ public class Receber10Notas {
         int notas[] = new int[10];
 
         for (int i = 0; i < 10; i++) {
-            System.out.printf("Insira o %d° número: ", i);
+            System.out.printf("Insira o %d° número: ", i+1);
             int numero = input.nextInt();
             notas[i] = numero;
         }
 
-        // ainda falta o for
+        int numeroMaior = 0;
+
+        for (int i = 0; i < notas.length; i++) {
+            if (notas[i] > numeroMaior) numeroMaior = notas[i];
+        }
+        System.out.println("O maior número é %d.".formatted(numeroMaior));
     }
 }
