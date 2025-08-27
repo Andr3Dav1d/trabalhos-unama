@@ -1,8 +1,8 @@
 package Encapsulamento.ProjCarro;
 
 public class Carro {
-    private String marca;
-    private int ano;
+    private final String marca;
+    private final int ano;
 
     Carro (String marca, int ano) {
         this.marca = marca;

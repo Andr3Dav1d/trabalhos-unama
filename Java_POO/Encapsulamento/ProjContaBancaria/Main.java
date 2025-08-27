@@ -1,3 +1,5 @@
+package Encapsulamento.ProjContaBancaria;
+
 public class Main {
     public static void main(String[] args) {
         ContaBancaria um = new ContaBancaria(1, 500); // Saldo inicial: R$500,00

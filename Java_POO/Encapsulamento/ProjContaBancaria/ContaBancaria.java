@@ -1,5 +1,7 @@
+package Encapsulamento.ProjContaBancaria;
+
 public class ContaBancaria {
-    private int numeroConta;
+    private final int numeroConta;
     private double saldo;
 
     ContaBancaria(int numeroConta, double saldo) {
