@@ -1,13 +1,13 @@
-package Fundamentos;
+package fundamentos;
 // Sacar
 // Depositar
 // Ver saldo
 
-import java.util.Scanner;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Banco {
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
     private static float saldo = 1000.0f; // Saldo global
     
     public static void clearScreenOrHome(int option1or2) throws IOException, InterruptedException {
@@ -30,7 +30,7 @@ public class Banco {
         scanner.nextLine();
         
         switch (opcao) {
-            case 1:
+            case 1 -> {
                 clearScreenOrHome(1);
                 subTitulo("Sacar");
                 System.out.printf("Você está com R$%.2f\n", saldo);
@@ -45,8 +45,8 @@ public class Banco {
                     System.out.printf("Saque realizado! Novo saldo: R$%.2f\n", saldo);
                 }
                 clearScreenOrHome(2);
-                break;
-            case 2:
+            }
+            case 2 -> {
                 clearScreenOrHome(1);
 
 
@@ -60,14 +60,16 @@ public class Banco {
                 System.out.printf("Deposito realizado! Novo saldo: R$%.2f\n", saldo);
 
                 clearScreenOrHome(2);
-                break;
-            case 3:
+            }
+            case 3 -> {
                 clearScreenOrHome(1);
                 System.out.println("Saindo...");
                 break;
-            default:
+            }
+            default -> {
                 System.out.println("Opção Inválida!");
                 clearScreenOrHome(2);
+            }
         }
     }
 

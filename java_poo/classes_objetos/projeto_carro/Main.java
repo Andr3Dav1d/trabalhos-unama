@@ -1,7 +1,8 @@
-package ProjetoCarro;
+import classes_objetos.projeto_carro.Carro;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedAudioFileException {
 
         // Criando dois objetos && Alterando os atributos
         Carro carro1 = new Carro("BMW", "X7", 2024);

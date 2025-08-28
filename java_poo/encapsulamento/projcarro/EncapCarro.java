@@ -1,10 +1,10 @@
 package encapsulamento.projcarro;
 
-public class Carro {
+public class EncapCarro {
     private final String marca;
     private final int ano;
 
-    Carro (String marca, int ano) {
+    EncapCarro (String marca, int ano) {
         this.marca = marca;
         this.ano = ano;
     }

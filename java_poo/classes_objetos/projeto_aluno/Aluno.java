@@ -1,4 +1,4 @@
-package ProjetoAluno;
+package classes_objetos.projeto_aluno;
 
 public class Aluno {
     String nome;

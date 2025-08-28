@@ -1,4 +1,4 @@
-package ProjetoLivraria;
+package classes_objetos.projeto_livraria;
 
 public class Main {
     public static void main (String[] args) {

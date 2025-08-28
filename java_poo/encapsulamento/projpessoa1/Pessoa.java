@@ -1,4 +1,4 @@
-package Encapsulamento.ProjPessoa1;
+package encapsulamento.projpessoa1;
 
 public class Pessoa {
     String nome;

@@ -1,22 +1,22 @@
-package ProjetoLivraria;
+package classes_objetos.projeto_livraria;
 
 public class Estante {
-    String genero;
-    int quantidadeLivros, descontoEstante;
+    public String genero;
+    public int quantidadeLivros, descontoEstante;
 
-    Estante (String genero, int quantidadeLivros) {
+    public Estante (String genero, int quantidadeLivros) {
         this.genero = genero;
         this.quantidadeLivros = quantidadeLivros;
         this.descontoEstante = 0;
     }
 
     // Método para alterar quantidade de livros
-    void alterarQntdLivros (int novaQntd) {
+    public void alterarQntdLivros (int novaQntd) {
         this.quantidadeLivros = novaQntd;
         System.out.printf("Nova quantidade de livros da estante %s: %d", this.genero, novaQntd);
     }
 
-    void imprimirNaTela () {
+    public void imprimirNaTela () {
         System.out.println("-------------ESTANTE-------------");
         System.out.println("Gênero: " + this.genero);
         System.out.println("Quantidade de Livros: " + (this.quantidadeLivros > 0 ? this.quantidadeLivros : "Sem estoque"));
@@ -25,7 +25,7 @@ public class Estante {
     }
 
     // Método para aplicar desconto na estante
-    void aplicarDesconto (int desconto) {
+    public void aplicarDesconto (int desconto) {
         this.descontoEstante = desconto;
     }
 }

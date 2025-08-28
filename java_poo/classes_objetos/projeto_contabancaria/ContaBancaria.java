@@ -1,21 +1,21 @@
-package ProjetoContaBancaria;
+package classes_objetos.projeto_contabancaria;
 
 public class ContaBancaria {
-    String numeroConta, titular;
-    double saldo;
+    public String numeroConta, titular;
+    public double saldo;
 
-    ContaBancaria (String numeroConta, String titular, double saldo) {
+    public ContaBancaria (String numeroConta, String titular, double saldo) {
         this.numeroConta = numeroConta;
         this.titular = titular;
         this.saldo = saldo;
     }
 
-    void depositar (double valor) {
+    public void depositar (double valor) {
         this.saldo += valor;
         System.out.printf("DEPOSITO: %s depositou R$%.2f. Valor final: R$%.2f\n", this.titular, valor, this.saldo);
     }
 
-    void sacar (double valor) {
+    public void sacar (double valor) {
         if (valor > this.saldo) {
             System.out.printf("SAQUE: O valor especificado de %s não foi sacado pois não tem saldo suficiente. Valor: R$%.2f\n", this.titular, this.saldo);
         } else {
@@ -24,7 +24,7 @@ public class ContaBancaria {
         }
     }
 
-    void consultarSaldo () {
+    public void consultarSaldo () {
         System.out.println("----------SALDO----------");
         System.out.println("Titular: " + this.titular);
         System.out.println("Número da Conta: " + this.numeroConta);

@@ -1,4 +1,4 @@
-package Fundamentos;
+package fundamentos;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -99,31 +99,19 @@ public class Repeticao {
 
             clearScreen();
             switch (opcao.toLowerCase()) {
-                case "1":
-                    exibirNumerosDe1a10();
-                    break;
-                case "2":
-                    lerApenas5Negativos();
-                    break;
-                case "3":
-                    exibirNumerosMenores();
-                    break;
-                case "4":
-                    exibirMenoresQue10();
-                    break;
-                case "5":
-                    exibirParesAte50();
-                    break;
-                case "6":
-                    somarApenasPares();
-                    break;
-                case "s":
+                case "1" -> exibirNumerosDe1a10();
+                case "2" -> lerApenas5Negativos();
+                case "3" -> exibirNumerosMenores();
+                case "4" -> exibirMenoresQue10();
+                case "5" -> exibirParesAte50();
+                case "6" -> somarApenasPares();
+                case "s" -> {
                     executando = false;
                     System.out.println("Saindo...");
-                    break;
-                default:
+                }
+                default -> {
                     System.out.println("Opção inválida.");
-                    break;
+                }
             }
             if (executando) {
                 System.out.print("Pressione ENTER para voltar ao menu.");

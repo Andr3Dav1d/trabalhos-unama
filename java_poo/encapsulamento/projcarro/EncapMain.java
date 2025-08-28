@@ -1,8 +1,8 @@
 package encapsulamento.projcarro;
 
-public class Main {
+public class EncapMain {
     public static void main(String[] args) {
-        Carro fiatUno = new Carro("Fiat Uno", 2010);
+        EncapCarro fiatUno = new EncapCarro("Fiat Uno", 2010);
         System.out.println("Modelo do Carro: %s; Ano: %d".formatted(fiatUno.getMarca(), fiatUno.getAno()));
     }
 }
