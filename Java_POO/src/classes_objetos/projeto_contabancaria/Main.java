@@ -1,4 +1,4 @@
-import classes_objetos.projeto_contabancaria.ContaBancaria;
+package classes_objetos.projeto_contabancaria;
 
 public class Main {
     public static void main(String[] args) {

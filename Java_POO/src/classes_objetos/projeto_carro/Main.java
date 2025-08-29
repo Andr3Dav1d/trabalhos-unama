@@ -1,4 +1,4 @@
-import classes_objetos.projeto_carro.Carro;
+package classes_objetos.projeto_carro;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class Main {

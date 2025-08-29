@@ -1,4 +1,4 @@
-package Java_ED.AtividadesVetor;
+package atividadesvetor;
 
 // Crie um programa com um vetor de 10 elementos inteiros. Exibir em tela os valores pares.
 public class ExibirValoresPares {

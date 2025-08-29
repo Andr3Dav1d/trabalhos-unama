@@ -1,4 +1,4 @@
-package Java_ED.AtividadesVetor;
+package atividadesvetor;
 import java.util.Random;
 
 // Criar um vetor com 10 idades e exibir em tela as idades maiores que 18 anos

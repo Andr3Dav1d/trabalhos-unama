@@ -1,4 +1,4 @@
-package Java_ED.AtividadesVetor;
+package atividadesvetor;
 import java.util.Scanner;
 
 // Crie um programa que armazene as notas de 10 alunos recebidas pelo usuário. O programa deve retornar a maior nota em tela.
