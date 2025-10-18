@@ -1,4 +1,4 @@
-package questao1;
+package pilhas_filas.questao1;
 public class Main {
     public static void main(String[] args) {
         Pilha<Integer> pilhaNumeros = new Pilha<>();

@@ -1,4 +1,4 @@
-package questao1;
+package pilhas_filas.questao1;
 import java.util.LinkedList;
 
 public class Fila<T> {

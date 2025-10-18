@@ -1,4 +1,4 @@
-package questao4e5;
+package pilhas_filas.questao4e5;
 
 public class Fila {
     private int[] elementos;
